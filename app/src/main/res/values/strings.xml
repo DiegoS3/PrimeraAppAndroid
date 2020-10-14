@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">PrimeraAppAndroid</string>
+    <string name="acercaDe">Aplicación realizada por Diego Sánchez para la asignatura de Programación Multimedia y Dispositivos Moviles</string>
+    <string name="redes">Redes Sociales</string>
 </resources>
