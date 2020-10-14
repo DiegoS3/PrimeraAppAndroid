@@ -14,11 +14,23 @@
             android:gravity="start|top"
             android:ems="10"
             android:id="@+id/eventoEditTextDesc"
-            android:layout_marginEnd="40dp"
+            android:layout_marginTop="24dp"
+            app:layout_constraintTop_toBottomOf="@+id/eventoEditTextLocalizacion"
+            android:layout_marginEnd="28dp"
             app:layout_constraintEnd_toEndOf="parent"
-            android:layout_marginStart="29dp" app:layout_constraintStart_toEndOf="@+id/eventoTextFechIDesc"
-            app:layout_constraintHorizontal_bias="0.375" android:layout_marginTop="24dp"
-            app:layout_constraintTop_toBottomOf="@+id/eventoEditTextLocalizacion"/>
+            android:layout_marginStart="49dp" app:layout_constraintStart_toEndOf="@+id/eventoTextFechIDesc"/>
+    <EditText
+            android:layout_width="235dp"
+            android:layout_height="43dp"
+            android:inputType="textShortMessage"
+            android:gravity="start|top"
+            android:ems="10"
+            android:id="@+id/eventoEditTextTitulo"
+            android:layout_marginEnd="28dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="44dp"
+            app:layout_constraintTop_toBottomOf="@+id/eventoTextTitulo"
+            android:layout_marginStart="90dp" app:layout_constraintStart_toEndOf="@+id/eventoTextTituloEvento"/>
     <EditText
             android:layout_width="235dp"
             android:layout_height="43dp"
@@ -26,11 +38,10 @@
             android:gravity="start|top"
             android:ems="10"
             android:id="@+id/eventoEditTextLocalizacion"
-            android:layout_marginEnd="40dp"
+            android:layout_marginEnd="28dp"
             app:layout_constraintEnd_toEndOf="parent"
             android:layout_marginTop="24dp" app:layout_constraintTop_toBottomOf="@+id/eventoEditTextTitulo"
-            android:layout_marginStart="22dp" app:layout_constraintStart_toEndOf="@+id/eventoTextLocalizacion"
-            app:layout_constraintHorizontal_bias="0.625"/>
+            android:layout_marginStart="42dp" app:layout_constraintStart_toEndOf="@+id/eventoTextLocalizacion"/>
     <TextView
             android:text="@string/eventoDesc"
             android:layout_width="wrap_content"
@@ -51,18 +62,6 @@
             android:textSize="16sp" app:layout_constraintStart_toStartOf="parent"
             android:layout_marginStart="16dp"
             android:layout_marginTop="44dp" app:layout_constraintTop_toBottomOf="@+id/eventoTextTituloEvento"/>
-    <EditText
-            android:layout_width="235dp"
-            android:layout_height="43dp"
-            android:inputType="textShortMessage"
-            android:gravity="start|top"
-            android:ems="10"
-            android:id="@+id/eventoEditTextTitulo"
-            android:layout_marginEnd="40dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            android:layout_marginTop="44dp"
-            app:layout_constraintTop_toBottomOf="@+id/eventoTextTitulo" android:layout_marginStart="72dp"
-            app:layout_constraintStart_toEndOf="@+id/eventoTextTituloEvento"/>
     <Button
             android:text="@string/btnConfirmar"
             android:layout_width="wrap_content"
