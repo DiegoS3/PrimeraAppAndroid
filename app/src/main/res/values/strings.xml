@@ -11,6 +11,15 @@
     <string name="menuAddFriend">Añadir Amigo</string>
     <string name="portada">Programación Multimedia y Dispositivos Móviles</string>
     <string name="acercaDe">Aplicación realizada por Diego Sánchez para la asignatura de Programación Multimedia
-        y Dispositivos Móviles</string>
+        y Dispositivos Móviles
+    </string>
     <string name="redes">Redes Sociales</string>
+    <string name="confirmarNota">Su nota se ha creado con exito</string>
+    <string name="confirmarNotaNull">Su nota no se ha podido crear</string>
+    <string name="contactoName">Nombre</string>
+    <string name="contactoEmail">Email</string>
+    <string name="contactoPhone">Movil</string>
+    <string name="contactoNuevo">Contacto Nuevo</string>
+    <string name="mailNoValido">Escribe un Email válido</string>
+    <string name="rellenarCampos">Debes rellenar todos los campos</string>
 </resources>

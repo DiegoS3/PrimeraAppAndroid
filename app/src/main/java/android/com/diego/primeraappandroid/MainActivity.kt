@@ -41,6 +41,14 @@ class MainActivity : AppCompatActivity() {
 
     }
 
+    private fun abrirAddFriend(){
+
+        val intent = Intent(this, AddFriendActivity::class.java)
+
+        startActivity(intent)
+
+    }
+
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
         val inflater: MenuInflater = menuInflater
         inflater.inflate(R.menu.main_menu, menu)
@@ -63,7 +71,7 @@ class MainActivity : AppCompatActivity() {
                 true
             }
             R.id.menuAddFriend -> {
-                composeEmail()
+                abrirAddFriend()
                 true
             }
             R.id.menuAbout -> {
