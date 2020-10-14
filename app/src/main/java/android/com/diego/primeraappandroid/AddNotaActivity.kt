@@ -3,6 +3,7 @@ package android.com.diego.primeraappandroid
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Toast
 import com.google.android.gms.actions.NoteIntents
 import kotlinx.android.synthetic.main.activity_add_nota.*
 
@@ -20,8 +21,14 @@ class AddNotaActivity : AppCompatActivity() {
             putExtra(NoteIntents.EXTRA_NAME, subject)
             putExtra(NoteIntents.EXTRA_TEXT, text)
         }
-        //if (intent.resolveActivity(packageManager) != null) {
+        if (intent.resolveActivity(packageManager) != null) {
             startActivity(intent)
-        //}
+            Toast.makeText(this, R.string.confirmarNota , Toast.LENGTH_SHORT).show()
+        } else {
+
+            Toast.makeText(this, R.string.confirmarNotaNull , Toast.LENGTH_SHORT).show()
+
+        }
+
     }
 }
