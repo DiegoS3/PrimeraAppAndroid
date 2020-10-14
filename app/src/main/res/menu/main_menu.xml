@@ -4,7 +4,7 @@
     <item
             android:id="@+id/btnShowMenu"
             android:title="@string/menuShowMenu"
-            android:icon="@drawable/common_google_signin_btn_icon_dark"
+            android:icon="@drawable/ic_menu"
             app:showAsAction="always">
         <menu>
 

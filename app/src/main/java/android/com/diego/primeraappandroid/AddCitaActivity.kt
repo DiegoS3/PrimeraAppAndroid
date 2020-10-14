@@ -46,12 +46,6 @@ class AddCitaActivity : AppCompatActivity() {
             startActivity(intent)
         }
     }
-    override fun onStart() {
-        super.onStart()
-        Log.i("CICLO", "Start")
-        Toast.makeText(this, "onStart", Toast.LENGTH_SHORT).show()
-    }
-
 
 
     // Para salvar el estado por ejemplo es usando un Bundle en el ciclo de vida
