@@ -12,6 +12,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         mainIbtnSendMail.setOnClickListener{ composeEmail()}
+        mainIbtnAbout.setOnClickListener{abrirAcercaDe()}
 
     }
 
@@ -22,5 +23,13 @@ class MainActivity : AppCompatActivity() {
         if (intent.resolveActivity(packageManager) != null) {
             startActivity(intent)
         }
+    }
+
+    private fun abrirAcercaDe(){
+
+        val intent = Intent(this, AcercaDeActivity::class.java).apply{}
+
+        startActivity(intent)
+
     }
 }
