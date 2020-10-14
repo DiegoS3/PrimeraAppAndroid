@@ -42,11 +42,7 @@ class AddCitaActivity : AppCompatActivity() {
             putExtra(CalendarContract.Events.DESCRIPTION, desc)
         putExtra(CalendarContract.Events.EVENT_LOCATION, location)}
 
-        if (title.isEmpty()){
-
-            Toast.makeText(this, R.string.rellenarObliga , Toast.LENGTH_SHORT).show()
-        }
-        else if (intent.resolveActivity(packageManager) != null) {
+        if (intent.resolveActivity(packageManager) != null) {
             startActivity(intent)
         }
     }

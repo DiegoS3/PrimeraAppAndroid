@@ -1,30 +1,28 @@
 <resources>
-    <string name="app_name">PrimeraAppAndroid</string>
-    <string name="titulo_nota">Titulo</string>
-    <string name="texto_nota">Texto</string>
-    <string name="btnConfirmar">Confirmar</string>
-    <string name="menuAddNota">Añadir Nota</string>
-    <string name="menuSendMail">Enviar Email</string>
-    <string name="menuAddCita">Añadir Cita</string>
-    <string name="menuAbout">Acerca de</string>
-    <string name="menuShowMenu">Mostrar Menu</string>
-    <string name="menuAddFriend">Añadir Amigo</string>
-    <string name="portada">Programación Multimedia y Dispositivos Móviles</string>
-    <string name="acercaDe">Aplicación realizada por Diego Sánchez para la asignatura de Programación Multimedia
-        y Dispositivos Móviles
-    </string>
-    <string name="redes">Redes Sociales</string>
-    <string name="confirmarNota">Su nota se ha creado con exito</string>
-    <string name="contactoName">Nombre</string>
+    <string name="app_name">FirstAppAndroid</string>
+    <string name="titulo_nota">Title</string>
+    <string name="texto_nota">Text</string>
+    <string name="btnConfirmar">Accept</string>
+    <string name="menuAddNota">Add Note</string>
+    <string name="menuSendMail">Send Mail</string>
+    <string name="menuAddCita">Add Event</string>
+    <string name="menuAbout">About</string>
+    <string name="menuShowMenu">Show Menu</string>
+    <string name="menuAddFriend">Add Friend</string>
+    <string name="portada">Multimedia Programming and Mobile Devices</string>
+    <string name="acercaDe">Application made by Diego Sánchez for the subject of Multimedia Programming and Mobile</string>
+    <string name="redes">Social Network</string>
+    <string name="confirmarNota">Your note has been created successfully</string>
+    <string name="contactoName">Name</string>
     <string name="contactoEmail">Email</string>
-    <string name="contactoPhone">Movil</string>
-    <string name="contactoNuevo">Contacto Nuevo</string>
-    <string name="mailNoValido">Escribe un Email válido</string>
-    <string name="rellenarCampos">Debes rellenar todos los campos</string>
-    <string name="eventoTitulo">Nuevo Evento</string>
-    <string name="eventoTituloEvent">Titulo</string>
-    <string name="eventoLugar">Localización</string>
-    <string name="eventoDesc">Descripción</string>
-    <string name="rellenarObliga">Debes rellenar al menos el titulo</string>
-    <string name="confirmarNotaNull">No se ha detectado ninguna aplicación de notas</string>
+    <string name="contactoPhone">Phone</string>
+    <string name="contactoNuevo">New Contact</string>
+    <string name="mailNoValido">Write a valid email</string>
+    <string name="rellenarCampos">You must fill all the fields</string>
+    <string name="eventoTitulo">New Event</string>
+    <string name="eventoTituloEvent">Title</string>
+    <string name="eventoLugar">Location</string>
+    <string name="eventoDesc">Description</string>
+    <string name="rellenarObliga">You must fill at least the title</string>
+    <string name="confirmarNotaNull">No notes app detected</string>
 </resources>
