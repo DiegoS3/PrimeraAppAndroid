@@ -10,4 +10,7 @@
     <string name="menuShowMenu">Mostrar Menu</string>
     <string name="menuAddFriend">Añadir Amigo</string>
     <string name="portada">Programación Multimedia y Dispositivos Móviles</string>
+    <string name="acercaDe">Aplicación realizada por Diego Sánchez para la asignatura de Programación Multimedia
+        y Dispositivos Móviles</string>
+    <string name="redes">Redes Sociales</string>
 </resources>
