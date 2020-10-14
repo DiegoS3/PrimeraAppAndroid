@@ -1,3 +1,13 @@
 <resources>
     <string name="app_name">PrimeraAppAndroid</string>
+    <string name="titulo_nota">Titulo</string>
+    <string name="texto_nota">Texto</string>
+    <string name="btnConfirmar">Confirmar</string>
+    <string name="menuAddNota">Añadir Nota</string>
+    <string name="menuSendMail">Enviar Email</string>
+    <string name="menuAddCita">Añadir Cita</string>
+    <string name="menuAbout">Acerca de</string>
+    <string name="menuShowMenu">Mostrar Menu</string>
+    <string name="menuAddFriend">Añadir Amigo</string>
+    <string name="portada">Programación Multimedia y Dispositivos Móviles</string>
 </resources>

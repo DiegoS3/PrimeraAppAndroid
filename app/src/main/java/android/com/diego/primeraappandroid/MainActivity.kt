@@ -59,11 +59,11 @@ class MainActivity : AppCompatActivity() {
                 true
             }
             R.id.menuAddCita -> {
-                //composeEmail()
+                composeEmail()
                 true
             }
             R.id.menuAddFriend -> {
-                //composeEmail()
+                composeEmail()
                 true
             }
             R.id.menuAbout -> {
