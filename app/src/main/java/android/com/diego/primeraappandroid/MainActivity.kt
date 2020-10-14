@@ -13,6 +13,7 @@ class MainActivity : AppCompatActivity() {
 
         mainIbtnSendMail.setOnClickListener{ composeEmail()}
         mainIbtnAbout.setOnClickListener{abrirAcercaDe()}
+        mainIbtnAddNota.setOnClickListener { abrirAddNota() }
 
     }
 
@@ -30,6 +31,15 @@ class MainActivity : AppCompatActivity() {
         val intent = Intent(this, AcercaDeActivity::class.java).apply{}
 
         startActivity(intent)
+
+    }
+
+    private fun abrirAddNota(){
+
+        val intent = Intent(this, AddNotaActivity::class.java).apply {
+
+            startActivity(intent)
+        }
 
     }
 }
