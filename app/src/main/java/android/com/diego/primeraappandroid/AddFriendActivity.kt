@@ -31,7 +31,7 @@ class AddFriendActivity : AppCompatActivity() {
 
             Toast.makeText(this, R.string.mailNoValido , Toast.LENGTH_SHORT).show()
 
-        }else if (name.equals("") or phone.equals("")){
+        }else if (name.isEmpty() or phone.isEmpty()){
 
             Toast.makeText(this, R.string.rellenarCampos , Toast.LENGTH_SHORT).show()
 
