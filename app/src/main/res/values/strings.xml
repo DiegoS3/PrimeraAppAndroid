@@ -11,5 +11,5 @@
     <string name="menuAddFriend">Añadir Amigo</string>
     <string name="portada">Programación Multimedia y Dispositivos Móviles</string>
     <string name="confirmarNota">Su nota se ha creado con exito</string>
-    <string name="confirmarNotaNull">Su nota np se ha podido crear</string>
+    <string name="confirmarNotaNull">No se ha detectado ninguna aplicación de notas</string>
 </resources>
