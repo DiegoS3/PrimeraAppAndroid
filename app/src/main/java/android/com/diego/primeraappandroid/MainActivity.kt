@@ -49,6 +49,14 @@ class MainActivity : AppCompatActivity() {
 
     }
 
+    private fun abrirAddCita(){
+
+        val intent = Intent(this, AddCitaActivity::class.java)
+
+        startActivity(intent)
+
+    }
+
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
         val inflater: MenuInflater = menuInflater
         inflater.inflate(R.menu.main_menu, menu)
@@ -67,7 +75,7 @@ class MainActivity : AppCompatActivity() {
                 true
             }
             R.id.menuAddCita -> {
-                composeEmail()
+                abrirAddCita()
                 true
             }
             R.id.menuAddFriend -> {

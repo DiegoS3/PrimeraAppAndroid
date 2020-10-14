@@ -22,4 +22,9 @@
     <string name="contactoNuevo">Contacto Nuevo</string>
     <string name="mailNoValido">Escribe un Email válido</string>
     <string name="rellenarCampos">Debes rellenar todos los campos</string>
+    <string name="eventoTitulo">Nuevo Evento</string>
+    <string name="eventoTituloEvent">Titulo</string>
+    <string name="eventoLugar">Localización</string>
+    <string name="eventoDesc">Descripción</string>
+    <string name="rellenarObliga">Debes rellenar al menos el titulo</string>
 </resources>
