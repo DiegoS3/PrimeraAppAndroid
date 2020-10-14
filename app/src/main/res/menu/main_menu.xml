@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+            android:id="@+id/btnShowMenu"
+            android:title="@string/menuShowMenu"
+            android:icon="@drawable/common_google_signin_btn_icon_dark"
+            app:showAsAction="always">
+        <menu>
+
+            <item
+                    android:id="@+id/menuAddNote"
+                    android:icon="@drawable/ic_addnote"
+                    android:title="@string/menuAddNota"/>
+
+            <item
+                    android:id="@+id/menuSendMail"
+                    android:icon="@drawable/ic_sendmail"
+                    android:title="@string/menuSendMail"/>
+            <item
+                    android:id="@+id/menuAddCita"
+                    android:icon="@drawable/ic_addcita"
+                    android:title="@string/menuAddCita"/>
+            <item
+                    android:id="@+id/menuAddFriend"
+                    android:icon="@drawable/ic_addfriend"
+                    android:title="@string/menuAddFriend"/>
+            <item
+                    android:id="@+id/menuAbout"
+                    android:icon="@drawable/ic_about"
+                    android:title="@string/menuAbout"/>
+
+
+        </menu>
+
+    </item>
+
+</menu>

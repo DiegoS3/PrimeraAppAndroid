@@ -4,16 +4,15 @@ import android.content.Intent
 import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.Menu
+import android.view.MenuInflater
+import android.view.MenuItem
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-
-        mainIbtnSendMail.setOnClickListener{ composeEmail()}
-        mainIbtnAbout.setOnClickListener{abrirAcercaDe()}
-        mainIbtnAddNota.setOnClickListener { abrirAddNota() }
 
     }
 
@@ -28,7 +27,7 @@ class MainActivity : AppCompatActivity() {
 
     private fun abrirAcercaDe(){
 
-        val intent = Intent(this, AcercaDeActivity::class.java).apply{}
+        val intent = Intent(this, AcercaDeActivity::class.java)
 
         startActivity(intent)
 
@@ -36,10 +35,42 @@ class MainActivity : AppCompatActivity() {
 
     private fun abrirAddNota(){
 
-        val intent = Intent(this, AddNotaActivity::class.java).apply {
+        val intent = Intent(this, AddNotaActivity::class.java)
 
-            startActivity(intent)
+        startActivity(intent)
+
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu): Boolean {
+        val inflater: MenuInflater = menuInflater
+        inflater.inflate(R.menu.main_menu, menu)
+        return true
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        // Handle item selection
+        return when (item.itemId) {
+            R.id.menuAddNote -> {
+                abrirAddNota()
+                true
+            }
+            R.id.menuSendMail -> {
+                composeEmail()
+                true
+            }
+            R.id.menuAddCita -> {
+                composeEmail()
+                true
+            }
+            R.id.menuAddFriend -> {
+                composeEmail()
+                true
+            }
+            R.id.menuAbout -> {
+                abrirAcercaDe()
+                true
+            }
+            else -> super.onOptionsItemSelected(item)
         }
-
     }
 }
