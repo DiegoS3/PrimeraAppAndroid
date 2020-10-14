@@ -15,7 +15,6 @@
     </string>
     <string name="redes">Redes Sociales</string>
     <string name="confirmarNota">Su nota se ha creado con exito</string>
-    <string name="confirmarNotaNull">Su nota no se ha podido crear</string>
     <string name="contactoName">Nombre</string>
     <string name="contactoEmail">Email</string>
     <string name="contactoPhone">Movil</string>
@@ -27,4 +26,5 @@
     <string name="eventoLugar">Localización</string>
     <string name="eventoDesc">Descripción</string>
     <string name="rellenarObliga">Debes rellenar al menos el titulo</string>
+    <string name="confirmarNotaNull">No se ha detectado ninguna aplicación de notas</string>
 </resources>

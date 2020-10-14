@@ -9,13 +9,17 @@ import kotlinx.android.synthetic.main.activity_add_nota.*
 
 class AddNotaActivity : AppCompatActivity() {
 
-
+    private var titulo : String = ""
+    private var texto : String = ""
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_add_nota)
 
-        notaBtnConfirmar.setOnClickListener { createNote(notaTextAddTitulo.text.toString(), notaTextAddTexto.text.toString()) }
+        this.titulo = notaTextAddTitulo.text.toString()
+        this.texto = notaTextAddTexto.text.toString()
+
+        notaBtnConfirmar.setOnClickListener { createNote(titulo, texto) }
 
     }
 
@@ -35,4 +39,27 @@ class AddNotaActivity : AppCompatActivity() {
 
     }
 
+    // Para salvar el estado por ejemplo es usando un Bundle en el ciclo de vida
+    override fun onSaveInstanceState(outState: Bundle) {
+        // Salvamos en un bundle estas variables o estados de la interfaz
+        outState.run {
+            // Actualizamos los datos o los recogemos de la interfaz
+            putString("TITULO", titulo)
+            putString("TEXTO", texto)
+        }
+        // Siempre se llama a la superclase para salvar las cosas
+        super.onSaveInstanceState(outState)
+    }
+
+    // Para recuperar el estado al volver al un estado de ciclo de vida de la Interfaz
+    override fun onRestoreInstanceState(savedInstanceState: Bundle) {
+        // Recuperamos en un bundle estas variables o estados de la interfaz
+        super.onRestoreInstanceState(savedInstanceState)
+        // Recuperamos del Bundle
+        savedInstanceState.run {
+            titulo = getString("TITULO").toString()
+            texto = getString("TEXTO").toString()
+
+        }
+    }
 }
