@@ -10,34 +10,62 @@ import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_add_cita.*
 import java.util.*
 
+/**
+ *
+ * Clase que permite incluir unevento en el calendario
+ *
+ * No incluye las diferentes fases del ciclo de la vida ya que no es necesario
+ *
+ * @author Diego
+ * @version 1.0
+ *
+ */
 class AddCitaActivity : AppCompatActivity() {
 
+    //Variables
     private var titulo : String = ""
     private var descripcion : String = ""
     private var localizacion : String = ""
 
+    /**
+     *
+     * Metodo que se activa nada mas crearse la aplicación
+     *
+     */
     override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
+        super.onCreate(savedInstanceState) //Guardamos los datos
         setContentView(R.layout.activity_add_cita)
 
         this.titulo = eventoEditTextTitulo.text.toString()
         this.descripcion = eventoEditTextLocalizacion.text.toString()
         this.localizacion = eventoEditTextLocalizacion.text.toString()
 
+        //LLamada al metodo addCalendarEvent al hacer click
         eventoBtnConfirmar.setOnClickListener { addCalendarEvent(titulo, descripcion
                 , localizacion) }
 
     }
 
+    /**
+     *
+     * Metodo que añade un evento en el calendario
+     * con un titulo, descripcion y localizacion
+     *
+     * @param title String con el titulo
+     * @param desc String con la descripcion
+     * @param location String con la localizacion del evento
+     *
+     */
     private fun addCalendarEvent(title: String, desc: String, location: String) {
 
+        //Uso del intent que nos pemite acceder al calendario
         val calendarEvent: Calendar = Calendar.getInstance()
         val intent = Intent(Intent.ACTION_EDIT).apply {
         type = "vnd.android.cursor.item/event"
-        putExtra("beginTime", calendarEvent.timeInMillis)
+        putExtra("beginTime", calendarEvent.timeInMillis) //Obtenemos fecha actual
         putExtra("allDay", true)
         putExtra("rule", "FREQ=YEARLY")
-        putExtra("endTime", calendarEvent.timeInMillis + 60 * 60 * 1000)
+        putExtra("endTime", calendarEvent.timeInMillis + 60 * 60 * 1000) //incrementamos fecha actual
         putExtra("title", title)
             putExtra(CalendarContract.Events.DESCRIPTION, desc)
         putExtra(CalendarContract.Events.EVENT_LOCATION, location)}

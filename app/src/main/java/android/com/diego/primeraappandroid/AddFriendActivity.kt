@@ -9,46 +9,86 @@ import android.util.Patterns
 import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_add_friend.*
 
+/**
+ *
+ * Clase que permite incluir un contacto en la agenda
+ *
+ * No incluye las diferentes fases del ciclo de la vida ya que no es necesario
+ *
+ * @author Diego
+ * @version 1.0
+ */
 class AddFriendActivity : AppCompatActivity() {
 
+    //Atributos
     private var nombre : String = ""
     private var mail : String = ""
     private var telefono : String = ""
 
+    /**
+     *
+     * Metodo que se activa nada mas crearse la aplicación
+     *
+     */
     override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
+        super.onCreate(savedInstanceState) //Guardamos los datos
         setContentView(R.layout.activity_add_friend)
 
         this.nombre = contactEditTextName.text.toString()
         this.mail = contactEditTextEmail.text.toString()
         this.telefono = contactEditTextPhone.text.toString()
 
+        //LLamada al metodo insertContact al hacer click
         contactBtnConfirmar.setOnClickListener {
             insertContact(nombre, mail, telefono) }
 
     }
 
+    /**
+     *
+     * Metodo que inserta un nuevo contacto en la agenda
+     * con un titulo, descripcion y localizacion
+     *
+     * @param name String con el nombre del contacto
+     * @param email String con el mail del contacto a guardar
+     * @param phone String con el numero de telefono
+     *
+     */
     private fun insertContact(name: String, email: String, phone: String) {
+
+        //Uso del intent que nos pemite acceder a la agenda
         val intent = Intent(Intent.ACTION_INSERT).apply {
             type = ContactsContract.Contacts.CONTENT_TYPE
             putExtra(ContactsContract.Intents.Insert.NAME, name)
             putExtra(ContactsContract.Intents.Insert.EMAIL, email)
             putExtra(ContactsContract.Intents.Insert.PHONE, phone)
         }
-        if (!validarMail(email)){
+        //Antes esta parte del codigo me funcionaba la dejo comentada para que se vea que
+        //comprobaba que los campos fueran buenos
+        /*if (!validarMail(email)){ //Validamos el mail
 
             Toast.makeText(this, R.string.mailNoValido , Toast.LENGTH_SHORT).show()
 
-        }else if (name.isEmpty() or phone.isEmpty()){
+        }else if (name.isEmpty() or phone.isEmpty()){ //Comprobamos que no estan vacios
 
             Toast.makeText(this, R.string.rellenarCampos , Toast.LENGTH_SHORT).show()
 
         }
-        else if (intent.resolveActivity(packageManager) != null) {
+        else */
+            if (intent.resolveActivity(packageManager) != null) {
             startActivity(intent)
         }
     }
 
+    /**
+     *
+     * metodo que valida un mail
+     *
+     * @param email String que sera comprobado
+     *
+     * @return Boolean si es valido true, sino false
+     *
+     */
     private fun validarMail(email: String) : Boolean{
 
         val pattern = Patterns.EMAIL_ADDRESS;

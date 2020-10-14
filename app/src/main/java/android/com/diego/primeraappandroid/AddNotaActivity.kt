@@ -7,8 +7,20 @@ import android.widget.Toast
 import com.google.android.gms.actions.NoteIntents
 import kotlinx.android.synthetic.main.activity_add_nota.*
 
+/**
+ *
+ * Clase que permite incluir una nota en la app que este descargada
+ * con esa funcionalidad
+ *
+ * No incluye las diferentes fases del ciclo de la vida ya que no es necesario
+ *
+ * @author Diego
+ * @version 1.0
+ *
+ */
 class AddNotaActivity : AppCompatActivity() {
 
+    //Variables
     private var titulo : String = ""
     private var texto : String = ""
 
@@ -19,10 +31,21 @@ class AddNotaActivity : AppCompatActivity() {
         this.titulo = notaTextAddTitulo.text.toString()
         this.texto = notaTextAddTexto.text.toString()
 
+        //LLamada al metodo createNote al hacer click
         notaBtnConfirmar.setOnClickListener { createNote(titulo, texto) }
 
     }
 
+    /**
+     *
+     * Metodo que añade una nota en la app que este descargada
+     * con esa funcionalidad (en este caso no existe esa app no creara nota)
+     * con un titulo, descripcion y localizacion
+     *
+     * @param subject String con el titulo
+     * @param text String con la descripcion
+     *
+     */
     private fun createNote(subject: String, text: String) {
         val intent = Intent(NoteIntents.ACTION_CREATE_NOTE).apply {
             putExtra(NoteIntents.EXTRA_NAME, subject)
@@ -32,7 +55,7 @@ class AddNotaActivity : AppCompatActivity() {
             startActivity(intent)
             Toast.makeText(this, R.string.confirmarNota , Toast.LENGTH_SHORT).show()
         } else {
-
+            //en caso de no poder aparece mensaje flotante
             Toast.makeText(this, R.string.confirmarNotaNull , Toast.LENGTH_SHORT).show()
 
         }
